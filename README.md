@@ -16,6 +16,6 @@ Open `http://localhost:3000`. Running `bin/rails db:seed` again will update the 
 
 ## Deployment
 
-The production app uses PostgreSQL. On Render, create a PostgreSQL database and a Ruby web service from this repository. Set `DATABASE_URL` to the database's internal URL, `RAILS_MASTER_KEY` to the contents of the local `config/master.key`, and `RAILS_ENV` to `production`. Use `bin/render-build.sh` as the build command and `bin/rails server` as the start command. The build script migrates and seeds the database, which works on Render's free web service without a pre-deploy command. The `Procfile` provides web and release commands if you use Heroku instead.
+The production app uses PostgreSQL. On Render, create a PostgreSQL database and a Ruby web service from this repository. Set `DATABASE_URL` to the database's internal URL, generate a `SECRET_KEY_BASE` value in Render, and set `RAILS_ENV` to `production`. Use `bin/render-build.sh` as the build command and `bin/rails server` as the start command. The build script migrates and seeds the database, which works on Render's free web service without a pre-deploy command. The `Procfile` provides web and release commands if you use Heroku instead.
 
-Deployed app: pending deployment.
+Deployed app: https://rottenpotatoes-nkr0.onrender.com
