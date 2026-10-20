@@ -1,0 +1,12 @@
+<% if notice.present? %><p class="notice"><%= notice %></p><% end %>
+
+<p class="eyebrow">RottenPotatoes</p>
+<h1><%= @movie.title %></h1>
+<%= render @movie %>
+
+<div class="actions">
+  <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
+  <%= link_to "Back to movies", movies_path %>
+
+  <%= button_to "Destroy this movie", @movie, method: :delete %>
+</div>

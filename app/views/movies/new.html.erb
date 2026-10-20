@@ -1,0 +1,10 @@
+<% content_for :title, "New movie" %>
+
+<p class="eyebrow">RottenPotatoes</p>
+<h1>New movie</h1>
+
+<%= render "form", movie: @movie %>
+
+<div class="back-link">
+  <%= link_to "Back to movies", movies_path %>
+</div>
